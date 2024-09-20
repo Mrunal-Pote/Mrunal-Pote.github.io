@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Mrunal Pote - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(45deg, #1d2b64, #f8cdda);
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .text {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ff7f50;
+            color: white;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .icon-link {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .icon-link:hover {
+            color: #ff7f50;
+        }
+    </style>
+</head>
+<body>
+
+<section id="home-section" class="hero">
+    <div class="overlay"></div>
+    <div class="text">
+        <span class="subheading">Hello!</span>
+        <h1 class="mb-4 mt-3">I'm <span>Mrunal Pote</span></h1>
+        <span id="typing-animation"></span>
+        <h2>B.E in Computer Engineering</h2>
+        <div class="social-icons">
+            <a href="https://github.com/Mrunal-Pote" class="btn">My Works</a>
+            <a href="https://linkedin.com/in/yourprofile" class="icon-link"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/yourprofile" class="icon-link"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script>
+    new Typed('#typing-animation', {
+        strings: ['Computer Engineer', 'Full Stack Developer', 'Frontend Developer'],
+        typeSpeed: 100,
+        backSpeed: 50,
+        loop: true,
+    });
+</script>
+
+</body>
+</html>
